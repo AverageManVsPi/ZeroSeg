@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-from distutils.core import setup,Extension
+from setuptools import setup
+
 setup(
     name = "ZeroSeg",
     version = "0.0.2",
