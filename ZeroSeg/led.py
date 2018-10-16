@@ -67,7 +67,7 @@ class device(object):
         Send the bytes (which should comprise of alternating command,
         data values) over the SPI device.
         """
-        self._spi.xfer2(list(data))
+        self._spi.xfer(list(data),5000000)
 
     def _values(self, position, buf):
         """
