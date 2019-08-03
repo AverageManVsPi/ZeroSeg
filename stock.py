@@ -36,7 +36,6 @@ def stock():
         output = data["Global Quote"]["05. price"]
         output_filtered = output[:4]
         device.write_text(1, "ZEN "+ output_filtered)
-        time.sleep(300)
 
 while True:
     device.brightness(level)
