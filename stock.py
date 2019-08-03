@@ -21,6 +21,7 @@ device.clear()
 
 # set brightness to minimal
 level = 1
+device.brightness(3)
 
 # check Zendesk stock price
 def stock():
@@ -37,23 +38,4 @@ def stock():
         output_filtered = output[:4]
         device.write_text(1, "ZEN "+ output_filtered)
 
-while True:
-    device.brightness(level)
-    if not GPIO.input(button1):
-        if level == 1:
-            print "MIN"
-            time.sleep(0.5)
-        if level >= 2:
-            level = level -1
-            print "-1 ", level
-            time.sleep(0.5)
-
-    elif not GPIO.input(button2):
-        if level == 15:
-            print "MAX"
-            time.sleep(0.5)
-        if level <= 14:
-            level = level +1
-            print "+1 ", level
-            time.sleep(0.5)
-    stock()
+stock()
