@@ -21,7 +21,7 @@ device.clear()
 
 # set brightness to minimal
 level = 1
-device.brightness(3)
+device.brightness(level)
 
 # check Zendesk stock price
 def stock():
