@@ -31,11 +31,11 @@ def stock():
         data = { "function": "GLOBAL_QUOTE",
                  "symbol": symbol,
                  "datatype": "json",
-                 "apikey": "YOUR_API_KEY_HERE" }
+                 "apikey": "YOUR_API_KEY" }
         response = requests.get(API_URL, data)
         data = response.json()
         output = data["Global Quote"]["05. price"]
-        output_filtered = output[:4]
-        device.write_text(1, "ZEN "+ output_filtered)
+        output_filtered = output[:6]
+        device.write_text(1, "-" + output_filtered + "-")
 
 stock()
