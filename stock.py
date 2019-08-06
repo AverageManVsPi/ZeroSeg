@@ -6,14 +6,6 @@ import requests
 import alpha_vantage
 import json
 import urllib
-import RPi.GPIO as GPIO
-
-# setup buttons
-button1 = 17
-button2 = 26
-GPIO.setmode(GPIO.BCM) # Use BCM GPIO numbers
-GPIO.setup(button1, GPIO.IN)
-GPIO.setup(button2, GPIO.IN)
 
 # cleanup before run
 device = led.sevensegment(cascaded=2)
