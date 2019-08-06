@@ -24,7 +24,16 @@ def stock():
         response = requests.get(API_URL, data)
         data = response.json()
         output = data["Global Quote"]["05. price"]
-        output_filtered = output[:6]
+        output_filtered = output[:4]
         device.write_text(1, " " + output_filtered)
 
-stock()
+def how_rich_am_i(output_filtered):
+    number_of_stocks_total = XXX # change XXX to your total number of owned stocks
+    richness = number_of_stocks_total * output_filtered
+    device.write_text(1, richness)
+
+while True:
+    stock()
+    time.sleep(10)
+    how_rich_am_i()
+    time.sleep(10)
