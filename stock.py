@@ -36,6 +36,6 @@ def stock():
         data = response.json()
         output = data["Global Quote"]["05. price"]
         output_filtered = output[:6]
-        device.write_text(1, "-" + output_filtered + "-")
+        device.write_text(1, " " + output_filtered)
 
 stock()
