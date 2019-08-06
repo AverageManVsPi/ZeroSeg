@@ -1,11 +1,8 @@
 #!/usr/bin/env python
+
+import time, requests, alpha_vantage, json, urllib
 import ZeroSeg.led as led
-import time
 from datetime import datetime
-import requests
-import alpha_vantage
-import json
-import urllib
 
 # cleanup before run
 device = led.sevensegment(cascaded=2)
