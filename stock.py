@@ -24,7 +24,7 @@ def stock():
         response = requests.get(API_URL, data)
         data = response.json()
         output = data["Global Quote"]["05. price"]
-        output_filtered = output[:4]
+        output_filtered = output[:5]
         device.write_text(1, " " + output_filtered)
 
 def how_rich_am_i(output_filtered):
